@@ -3,64 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Website</title>
+    <title>Humanoid Robotics Project</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Navbar -->
+    <!-- Sticky Navbar -->
     <nav class="navbar">
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#technology">Technology</a></li>
+            <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <h1>Welcome to Our Professional Website</h1>
-        <p>Delivering quality solutions for your needs</p>
-        <button onclick="window.location.href='#services';" class="hero-button">Explore Our Services</button>
+    <!-- Project Overview Section -->
+    <section id="overview" class="hero">
+        <div class="hero-content">
+            <h1>Humanoid Robotics with ESP32-CAM</h1>
+            <p>Explore the world of humanoid robotics with cutting-edge technology.</p>
+            <a href="#features" class="btn hero-btn">Discover Features</a>
+        </div>
     </section>
 
-    <!-- About Section with Accordion -->
-    <section id="about" class="about-section">
-        <h2>About Us</h2>
-        <div class="accordion">
-            <h3 class="accordion-header">Our Mission</h3>
-            <div class="accordion-content">
-                <p>We strive to deliver top-notch solutions for all our clients.</p>
-            </div>
-
-            <h3 class="accordion-header">Our Vision</h3>
-            <div class="accordion-content">
-                <p>Our vision is to innovate and provide excellent services worldwide.</p>
+    <!-- Features Section with Accordion -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2>Project Features</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <h3 class="accordion-header">AI Integration</h3>
+                    <div class="accordion-content">
+                        <p>Our humanoid robot utilizes artificial intelligence to perform various tasks autonomously.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">ESP32-CAM Integration</h3>
+                    <div class="accordion-content">
+                        <p>The ESP32-CAM module provides real-time video streaming and facial recognition capabilities.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">Motion Control</h3>
+                    <div class="accordion-content">
+                        <p>Advanced motion algorithms allow smooth and precise movements.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-        <h2>Our Services</h2>
-        <div class="services">
-            <div class="service">
-                <h3>Service 1</h3>
-                <p>Detail of Service 1</p>
-                <button onclick="window.location.href='#contact';">Contact Us</button>
+    <!-- Technology Section -->
+    <section id="technology" class="technology-section">
+        <div class="container">
+            <h2>Technological Components</h2>
+            <div class="tech-cards">
+                <div class="card">
+                    <h3>ESP32-CAM</h3>
+                    <p>The heart of the project, ESP32-CAM, provides both processing power and vision capabilities.</p>
+                </div>
+                <div class="card">
+                    <h3>Servo Motors</h3>
+                    <p>Servo motors drive the humanoid's articulated movements with precision.</p>
+                </div>
+                <div class="card">
+                    <h3>AI Algorithms</h3>
+                    <p>Utilizing machine learning models to process visual data and control the robot’s actions.</p>
+                </div>
             </div>
-            <div class="service">
-                <h3>Service 2</h3>
-                <p>Detail of Service 2</p>
-                <button onclick="window.location.href='#contact';">Contact Us</button>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2>Project Gallery</h2>
+            <div class="gallery-grid">
+                <img src="robot1.jpg" alt="Humanoid Robot Front View">
+                <img src="robot2.jpg" alt="Robot Side View">
+                <img src="robot3.jpg" alt="ESP32-CAM Module">
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>© 2024 Professional Website. All rights reserved.</p>
+        <div class="container">
+            <p>© 2024 Humanoid Robotics Project. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
