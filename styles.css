@@ -1,31 +1,35 @@
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
+    color: #333;
 }
 
-/* Navbar */
+/* Sticky Navbar */
 .navbar {
-    background-color: #333;
-    padding: 15px;
-    text-align: center;
+    background-color: #222;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 10px 0;
 }
 
 .navbar ul {
-    list-style-type: none;
-    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
     padding: 0;
 }
 
 .navbar li {
-    display: inline;
     margin: 0 15px;
 }
 
 .navbar a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-size: 18px;
 }
@@ -36,87 +40,102 @@ body {
 
 /* Hero Section */
 .hero {
+    background-color: #1e1e1e;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.hero-btn {
+    background-color: #ff9800;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.hero-btn:hover {
+    background-color: #e67e00;
+}
+
+/* Features Section */
+.features-section {
+    background-color: #fff;
+    padding: 50px;
+}
+
+.accordion-header {
     background-color: #007bff;
     color: white;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.hero-button {
-    background-color: #ff9800;
-    color: white;
-    border: none;
-    padding: 15px 30px;
+    padding: 15px;
     cursor: pointer;
-    border-radius: 5px;
-}
-
-.hero-button:hover {
-    background-color: #e68a00;
-}
-
-/* About Section with Accordion */
-.about-section {
-    padding: 50px;
-    background-color: #fff;
+    margin-bottom: 5px;
+    text-align: left;
 }
 
 .accordion-content {
     display: none;
-    padding: 10px;
-    background-color: #f9f9f9;
+    padding: 15px;
+    background-color: #f0f0f0;
 }
 
-.accordion-header {
-    cursor: pointer;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    margin-bottom: 5px;
-}
-
-.accordion-header:hover {
-    background-color: #0056b3;
-}
-
-/* Services Section */
-.services-section {
+/* Technology Section */
+.technology-section {
     padding: 50px;
-    background-color: #e9e9e9;
-    text-align: center;
+    background-color: #f8f8f8;
 }
 
-.services {
+.tech-cards {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.service {
+.card {
     background-color: #fff;
     padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
+    border: 1px solid #ddd;
     width: 30%;
+    text-align: center;
+    transition: transform 0.3s;
 }
 
-.service button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
+.card:hover {
+    transform: scale(1.05);
 }
 
-.service button:hover {
-    background-color: #218838;
+/* Gallery Section */
+.gallery-section {
+    padding: 50px;
+    background-color: #fff;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
 }
 
 /* Footer */
 .footer {
-    background-color: #333;
+    background-color: #222;
     color: white;
-    text-align: center;
     padding: 20px;
+    text-align: center;
 }
