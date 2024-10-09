@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Welcome to Our Professional Website</h1>
+        <p>Delivering quality solutions for your needs</p>
+        <button onclick="window.location.href='#services';" class="hero-button">Explore Our Services</button>
+    </section>
+
+    <!-- About Section with Accordion -->
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <div class="accordion">
+            <h3 class="accordion-header">Our Mission</h3>
+            <div class="accordion-content">
+                <p>We strive to deliver top-notch solutions for all our clients.</p>
+            </div>
+
+            <h3 class="accordion-header">Our Vision</h3>
+            <div class="accordion-content">
+                <p>Our vision is to innovate and provide excellent services worldwide.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Service 1</h3>
+                <p>Detail of Service 1</p>
+                <button onclick="window.location.href='#contact';">Contact Us</button>
+            </div>
+            <div class="service">
+                <h3>Service 2</h3>
+                <p>Detail of Service 2</p>
+                <button onclick="window.location.href='#contact';">Contact Us</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Professional Website. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
