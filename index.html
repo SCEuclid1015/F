@@ -3,98 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Humanoid Robotics Project</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Humanoid Robot Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Humanoid Robot</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#applications">Applications</a></li>
+                    <li><a href="#team">Team</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <!-- Sticky Navbar -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="#overview">Overview</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#technology">Technology</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Project Overview Section -->
-    <section id="overview" class="hero">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="hero-content">
-            <h1>Humanoid Robotics with ESP32-CAM</h1>
-            <p>Explore the world of humanoid robotics with cutting-edge technology.</p>
-            <a href="#features" class="btn hero-btn">Discover Features</a>
+            <h2>Welcome to the Future of Robotics</h2>
+            <p>Meet the Humanoid Robot, the next-generation robot designed to move, interact, and assist in a world shaped by technology.</p>
+            <a href="#overview" class="cta-button">Learn More</a>
         </div>
     </section>
 
-    <!-- Features Section with Accordion -->
+    <!-- Overview Section -->
+    <section id="overview" class="overview-section">
+        <div class="container">
+            <h2 class="section-title">Project Overview</h2>
+            <p>Our Humanoid Robot can be controlled using gestures and by training AI. It is very useful for the future, making our lives simpler and easier.</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
     <section id="features" class="features-section">
         <div class="container">
-            <h2>Project Features</h2>
-            <div class="accordion">
-                <div class="accordion-item">
-                    <h3 class="accordion-header">AI Integration</h3>
-                    <div class="accordion-content">
-                        <p>Our humanoid robot utilizes artificial intelligence to perform various tasks autonomously.</p>
-                    </div>
+            <h2 class="section-title">Robot Features</h2>
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <i class="fas fa-microchip"></i>
+                    <h3>Advanced AI</h3>
+                    <p>Powered by deep learning algorithms for autonomous decision-making and navigation.</p>
                 </div>
-                <div class="accordion-item">
-                    <h3 class="accordion-header">ESP32-CAM Integration</h3>
-                    <div class="accordion-content">
-                        <p>The ESP32-CAM module provides real-time video streaming and facial recognition capabilities.</p>
-                    </div>
+                <div class="feature-card">
+                    <i class="fas fa-eye"></i>
+                    <h3>Sensors & Vision</h3>
+                    <p>Equipped with ESP32, ESP32Cam, and wires.</p>
                 </div>
-                <div class="accordion-item">
-                    <h3 class="accordion-header">Motion Control</h3>
-                    <div class="accordion-content">
-                        <p>Advanced motion algorithms allow smooth and precise movements.</p>
-                    </div>
+                <div class="feature-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>Human-like Interaction</h3>
+                    <p>Designed to collaborate seamlessly with humans in workspaces, offering natural communication and interaction.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Technology Section -->
-    <section id="technology" class="technology-section">
+    <!-- Applications Section -->
+<section id="applications" class="applications-section">
+    <div class="container">
+        <h2 class="section-title">Applications</h2>
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <h3 style="color:cyan;">Controlled by ESP32-CAM</h3>
+                    <span class="arrow">➕</span>
+                </div>
+                <div class="accordion-content">
+                    <p style="color:white;">The robot’s movements and actions are monitored and managed by the ESP32-CAM, allowing for live video streaming and remote control via Wi-Fi. This module provides the backbone for the robot’s operation and its ability to respond to commands efficiently.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <h3 style="color:cyan;">Gesture Control</h3>
+                    <span class="arrow">➕</span>
+                </div>
+                <div class="accordion-content">
+                    <p style="color:white;">By integrating gesture recognition technology, users can control the robot with simple hand movements, offering an intuitive interface for interacting with the robot. This feature enhances user experience by making the robot more accessible and easier to operate without physical contact.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <h3 style="color:cyan;">AI Assistant</h3>
+                    <span class="arrow">➕</span>
+                </div>
+                <div class="accordion-content">
+                    <p style="color:white;"> The robot is equipped with an artificial intelligence system that helps it interpret commands, perform tasks autonomously, and assist users in routine activities. The AI algorithms enable the robot to learn and adapt to different tasks, making it a powerful tool for simplifying daily work.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <h3 style="color:cyan;">Simplifying Work</h3>
+                    <span class="arrow">➕</span>
+                </div>
+                <div class="accordion-content">
+                    <p style="color:white;">The primary goal of this project is to create a robot that assists in everyday tasks, whether it’s at home, in the office, or for special projects. The combination of gesture control and AI-driven automation provides a seamless, hands-free experience that reduces workload and enhances productivity.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript for Accordion Functionality -->
+<script>
+    function toggleAccordion(header) {
+        const content = header.nextElementSibling;
+        const arrow = header.querySelector('.arrow');
+
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            arrow.textContent = "➕";
+        } else {
+            content.style.display = "block";
+            arrow.textContent = "➖";
+        }
+    }
+</script>
+
+<!-- CSS for Accordion -->
+<style>
+    .accordion {
+        border: 1px solid #000000;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    .accordion-item {
+        border-bottom: 1px solid #000000;
+    }
+    .accordion-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        cursor: pointer;
+        background-color: #000000;
+        border-radius: 5px;
+    }
+    .accordion-header:hover {
+        background-color: #2d2c2c;
+    }
+    .accordion-content {
+        display: none;
+        padding: 10px;
+        background-color: #005b85;
+    }
+</style>
+
+
+    <!-- Team Section -->
+    <section id="team" class="team-section">
         <div class="container">
-            <h2>Technological Components</h2>
-            <div class="tech-cards">
-                <div class="card">
-                    <h3>ESP32-CAM</h3>
-                    <p>The heart of the project, ESP32-CAM, provides both processing power and vision capabilities.</p>
+            <h2 class="section-title">Our Team</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <h3>Arshad Kalawant</h3>
+                    <p>Web Developer</p>
                 </div>
-                <div class="card">
-                    <h3>Servo Motors</h3>
-                    <p>Servo motors drive the humanoid's articulated movements with precision.</p>
+                <div class="team-member">
+                    <h3>Chaitanya Joshi</h3>
+                    <p>Programmer</p>
                 </div>
-                <div class="card">
-                    <h3>AI Algorithms</h3>
-                    <p>Utilizing machine learning models to process visual data and control the robot’s actions.</p>
+                <div class="team-member">
+                    <h3>Venkatesh Relekar</h3>
+                    <p>Connection Specialist</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery-section">
-        <div class="container">
-            <h2>Project Gallery</h2>
-            <div class="gallery-grid">
-                <img src="robot1.jpg" alt="Humanoid Robot Front View">
-                <img src="robot2.jpg" alt="Robot Side View">
-                <img src="robot3.jpg" alt="ESP32-CAM Module">
-            </div>
-        </div>
+    <!-- Helper Section -->
+    <section class="helper-section">
+    <h2 class="section-title">Helper</h2>
+        <p><strong>Teacher Name:</strong> Nimish Sir</p>
+        <p>Thank you, Nimish Sir, for guiding us throughout this project and providing valuable support and feedback.</p>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>© 2024 Humanoid Robotics Project. All rights reserved.</p>
-        </div>
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Humanoid Robot Project. All rights reserved.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
