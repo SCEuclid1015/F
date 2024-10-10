@@ -1,141 +1,262 @@
-/* Global Styles */
-body {
-    font-family: 'Arial', sans-serif;
+/* General Styles */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    color: #333;
+    box-sizing: border-box;
 }
 
-/* Sticky Navbar */
-.navbar {
-    background-color: #222;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-    padding: 10px 0;
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1d1f21;
+    color: #eee;
+    line-height: 1.6;
 }
 
-.navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-}
-
-.navbar li {
-    margin: 0 15px;
-}
-
-.navbar a {
-    color: #fff;
+a {
     text-decoration: none;
-    font-size: 18px;
+    color: white;
 }
 
-.navbar a:hover {
-    color: #ff9800;
+header {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    display: inline-block;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+header nav {
+    float: right;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.nav-links a:hover {
+    color: #00d2ff;
 }
 
 /* Hero Section */
 .hero {
-    background-color: #1e1e1e;
     height: 100vh;
+    background: url('robotic-bg.jpg') no-repeat center center/cover;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
     color: white;
 }
 
-.hero h1 {
-    font-size: 48px;
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: fadeIn 2s;
 }
 
 .hero p {
-    font-size: 18px;
-    margin: 20px 0;
+    font-size: 1.5em;
+    margin-bottom: 40px;
 }
 
-.hero-btn {
-    background-color: #ff9800;
-    color: #fff;
+.cta-button {
     padding: 15px 30px;
-    border-radius: 5px;
-    text-decoration: none;
+    background: linear-gradient(135deg, #00d2ff, #007BFF);
+    border-radius: 30px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: background 0.3s ease;
 }
 
-.hero-btn:hover {
-    background-color: #e67e00;
+.cta-button:hover {
+    background: linear-gradient(135deg, #ffdf00, #ff8800);
+}
+
+/* Section Styles */
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #00d2ff;
+}
+
+.overview-section p, .applications-section ul {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2em;
 }
 
 /* Features Section */
-.features-section {
-    background-color: #fff;
-    padding: 50px;
+.feature-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.accordion-header {
-    background-color: #007bff;
+.feature-card {
+    background-color: #252525;
     color: white;
-    padding: 15px;
-    cursor: pointer;
-    margin-bottom: 5px;
-    text-align: left;
+    border-radius: 15px;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
 }
 
-.accordion-content {
-    display: none;
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-card i {
+    font-size: 3em;
+    color: #00d2ff;
+    margin-bottom: 20px;
+}
+
+/* Applications Section */
+.applications-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.applications-section ul li {
+    background: linear-gradient(135deg, #007BFF, #00d2ff);
     padding: 15px;
+    margin: 10px 0;
+    color: cyan;
+    font-size: 1.2em;
+    text-align: center;
+    border-radius: 8px;
+    transition: background 1.3s ease;
+}
+
+.applications-section ul li:hover {
+    background: linear-gradient(135deg, #1c1b1b, #1c1b1b);
+}
+
+/* Team Section */
+.team-members {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 30%;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.team-member h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+#members-section {
+    padding: 20px;
     background-color: #f0f0f0;
 }
 
-/* Technology Section */
-.technology-section {
-    padding: 50px;
-    background-color: #f8f8f8;
-}
-
-.tech-cards {
-    display: flex;
-    justify-content: space-between;
-}
-
-.card {
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    width: 30%;
+#members-section h2, #members-section ul {
     text-align: center;
-    transition: transform 0.3s;
 }
 
-.card:hover {
-    transform: scale(1.05);
+/* Styles for Helper Section */
+#helper-section {
+    padding: 40px 20px;
+    text-align: center; /* Center the text */
+    margin: 20px 0;
 }
 
-/* Gallery Section */
-.gallery-section {
-    padding: 50px;
-    background-color: #fff;
+#helper-section .cyan-text {
+    color: #00FFFF; /* Cyan Color */
+    font-size: 24px;
+    font-weight: bold;
 }
 
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+#helper-section p {
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 1.6;
 }
-
-.gallery-grid img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* Footer */
-.footer {
-    background-color: #222;
+footer {
+    background-color: #111;
     color: white;
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .feature-cards, .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card, .team-member {
+        width: 80%;
+    }
+
+    .hero h2 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
 }
